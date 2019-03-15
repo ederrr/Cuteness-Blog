@@ -1,0 +1,173 @@
+@font-face {
+	font-family: OpenSans;
+	src: url('assets/fonts/OpenSans-Regular.ttf');
+}
+
+@media only screen and (min-width: 480px) {
+	#container {
+		flex-wrap: wrap;
+	}
+}
+@media only screen and (min-width: 780px) {
+	#container {
+		flex-wrap: nowrap;
+	}
+}
+
+body {
+	margin: auto;
+	color: #808080;
+	width: 100%;
+}
+
+header {
+	box-sizing: border-box;
+	height: 104px;
+	box-shadow: 2.1px 2.1px 16px 0 rgba(85, 76, 92, 0.25);
+	background-color: #32bccc;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-left: 9%;
+	padding-right: 9%;
+}
+#logo {
+	
+}
+
+nav {
+	margin-left: auto;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+}
+
+nav ul li {
+	padding: 1%;
+	text-transform: uppercase;
+	list-style-type: none;
+	color: white;
+	font-family: OpenSans;
+	font-weight: bold;
+}
+#container {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding-left: 9%;
+	padding-right: 9%;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 2;
+	border: dashed 1px;
+}
+
+section {
+	
+}
+
+aside {
+	flex-grow: 1;
+	width: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	border: dashed 1px;
+
+}
+
+#box-email {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	background-color: #32bccc;
+	flex-grow: 1;
+	opacity: 0.5;
+}
+
+#box-email p{
+	color: white;
+	text-align: center;
+	font-family: OpenSans;
+	font-size: 24px;
+	font-weight: 800;
+}
+
+#box-email #email{
+	color: white;
+	align-items: center;
+	height: 42px;
+	border: none;
+  	border-radius: 4px;
+}
+
+#box-email #send{
+	color: white;
+	text-transform: uppercase;
+	background-color: #ed5564;
+	border: none;
+	border-radius: 21px;
+	max-width: 30%;
+	align-self: flex-end;
+	margin-top: 7%;
+	font-family: OpenSans;
+	font-size: 18px;
+	font-weight: 800;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.78;
+	letter-spacing: 1.4px;
+	padding: 2% 3% 2% 3%;
+}
+
+.comment {
+	background-color: #f3f3f3;
+}
+
+footer {
+	height: 56px;
+	background-color: #32bccc;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	color: white;
+}
+
+footer svg {
+	fill: white;
+}
+
+.text-yellow{
+	color: #f6bb42;
+}
+
+.text-red {
+	color: #ed5564;
+}
+
+.text-blue {
+	color: #32bccc;
+}
+
+.text-bold {
+	font-weight: bold;
+}
+#pusheen, #rabbit {
+	width: 100%;
+	height: auto;
+}
+#pusshen {
+	max-width: 360px;
+	max-height: 280px;
+}
+#rabbit {
+	max-width: 760px;
+	max-height: 474px;
+}
