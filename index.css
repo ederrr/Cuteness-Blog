@@ -16,7 +16,7 @@
 	}
 	#overlay {
 		visibility: hidden;
-		position: absolute;
+		position: fixed;
 		background-color: black;
 		opacity: 0.7;
 		flex-direction: row;
@@ -33,7 +33,7 @@
 		flex-direction: column;
 		justify-content: space-between;
 		background-color: white;
-		position: absolute;
+		position: fixed;
 		right: 0;
 		padding: 8% 5% 8% 5%;
 		height: 90%;

@@ -1,0 +1,112 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: gray;
+}
+body{
+	text-align: center;
+}
+
+header {
+	background-color: #32bccc;
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+#logo {
+	width: auto;
+	max-width: 100%;
+}
+header div {
+	display: inline-block;
+	width: 45%;
+	text-align: left;
+	vertical-align: middle;
+}
+header nav {
+	display: inline-block;
+	width: 45%;
+	text-align: right;
+	vertical-align: middle;
+}
+header li {
+	display: inline;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+aside {
+	display: inline-block;
+	width: calc(30% - 20px);
+	margin: 0 0 0 20px;
+	vertical-align: top;
+}
+#box-email {
+	box-sizing: content-box;
+	background-color: #32bccc;
+	opacity: 0.5;
+	font-weight: 900;
+	padding: 5%;
+}
+#box-email p{
+	text-align: left;
+	color:white;
+}
+#box-email input[type='email']{
+	min-height: 30px;
+	width: 100%;
+	margin-top: 5%;
+	margin-bottom: 5%;	
+}
+#box-email input[type='button']{
+	display: block;
+	color:white;
+	font-weight: 900;
+	min-height: 30px;
+	width: 30%;
+	text-transform: uppercase;
+	background-color: crimson;
+	border: none;
+	border-radius: 50px;
+	margin-left: auto;
+}
+main {
+	display: inline-block;
+	width: calc(60% - 20px);
+	margin: 0 20px 0 0;
+	vertical-align: top;
+	text-align: left;
+}
+#rabbit, #pusheen {
+	width: 100%;
+}
+footer {
+	clear: both;
+	background-color: #32bccc;
+}
+footer {
+	color:white;
+	text-align: center;
+	
+}
+footer div, footer p {
+	display: inline-block;
+	width: 45%;
+	vertical-align: middle;
+	text-align: start;
+}
+footer div {
+	text-align: end;
+}
+footer div svg {
+	vertical-align: middle;
+	margin-left: 10px;
+}
+footer span {
+	font-weight: 900;
+}
+img {
+	width: auto;
+	max-width: 100%;
+}
