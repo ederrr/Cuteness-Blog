@@ -12,46 +12,40 @@
 		<img id="logo" src="assets/logo.png" alt="logo do blog">
 		
 		<nav>
-			<ul>
-				<li>Dicas</li>
-				<li>Saúde</li>
-				<li>Fashion</li>
-				<li>Entretenimento</li>
-				<li>Histórias</li>
-			</ul>
+			<div id="button-menu">
+					<span class="fas fa-bars"></span>
+				</div>
+				<div id="overlay"></div>
+				<div id="menu-overlay">
+					<ul >
+						<li>Dicas</li>
+						<li>Saúde</li>
+						<li>Fashion</li>
+						<li>Entretenimento</li>
+						<li>Histórias</li>
+					</ul>
+					<div class="box-search" id="overlay-search">
+						<input type="search" name="search" id="search" placeholder="Pesquisar no blog">
+						<svg width="17px" height="18px">
+							<image xlink:href="assets/search.svg" width="17px" height="18px" alt="botao de busca"></image>
+						</svg>
+					</div>
+					<div id="svg-share">
+						<svg width="35px" height="35px">
+							<image xlink:href="assets/instagram-blue.svg" alt="instagram" width="35px" height="35px"></image>
+						</svg>
+						<svg width="35px" height="35px">
+							<image xlink:href="assets/twitter-blue.svg" alt="twitter" width="35px" height="35px"></image>
+						</svg>
+						<svg width="35px" height="35px">
+							<image xlink:href="assets/facebook-blue.svg" alt="facebook" width="35px" height="35px"></image>
+						</svg>
+					</div>
+				</div>
+			</nav>
 		</nav>
 	</header>
-	<div id="button-menu">
-		<span class="fas fa-bars"></span>
-	</div>
-	<div id="overlay"></div>
-		<div id="menu-overlay">
-			<ul >
-				<li>Dicas</li>
-				<li>Saúde</li>
-				<li>Fashion</li>
-				<li>Entretenimento</li>
-				<li>Histórias</li>
-			</ul>
-			<div class="box-search" id="overlay-search">
-				<input type="search" name="search" id="search" placeholder="Pesquisar no blog">
-				<svg width="17px" height="18px">
-					<image xlink:href="assets/search.svg" width="17px" height="18px" alt="botao de busca"></image>
-				</svg>
-			</div>
-			<div id="svg-share">
-				<svg width="35px" height="35px">
-					<image xlink:href="assets/instagram-blue.svg" alt="instagram" width="35px" height="35px"></image>
-				</svg>
-				<svg width="35px" height="35px">
-					<image xlink:href="assets/twitter-blue.svg" alt="twitter" width="35px" height="35px"></image>
-				</svg>
-				<svg width="35px" height="35px">
-					<image xlink:href="assets/facebook-blue.svg" alt="facebook" width="35px" height="35px"></image>
-				</svg>
-			</div>
-		</div>
-	</div>
+	
 	<div id="container">
 		<main>
 			<section>
@@ -92,7 +86,7 @@
 					</div>
 				</div>
 			</section>
-			<section >
+			<section class="section-comment" >
 				<h1 class="text-blue text-regular text-bold">Comentários</h1>
 				<article class="container-comment">
 					<h2 class="text-red text-small text-bold">Marly Cláudio</h2>
@@ -121,7 +115,7 @@
 					<input type="button" class="button" value="comentar" id="comment">
 				</form>
 			</section>
-			<section>
+			<section class="section-linked">
 				<h1 class="text-blue">Posts Relacionados</h1>
 				<article class="post-linked">
 					<img src="assets/panda.png" id="panda" alt="panda">

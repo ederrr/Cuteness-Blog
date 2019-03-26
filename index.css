@@ -10,6 +10,8 @@
 	}
 	header {
 		height: 70px;
+		position: fixed;
+		z-index: 1;
 	}
 	#logo {
 		width: 70%;
@@ -19,13 +21,20 @@
 		position: fixed;
 		background-color: black;
 		opacity: 0.7;
-		flex-direction: row;
-		width: 100%;
+		display: flex;
+		flex: 1;
+		left: 0;
 		height: 90%;
+		width: 30%;
 		top: 70px;
 	}
 	#button-menu:hover ~ div{
 		visibility: visible;
+		flex: 1;
+	}
+	#button-menu:hover nav{
+		visibility: visible;
+		flex: 1;
 	}
 	#menu-overlay {
 		display: flex;
@@ -37,21 +46,24 @@
 		right: 0;
 		padding: 8% 5% 8% 5%;
 		height: 90%;
+		width: 70%;
 		top: 70px;
-		opacity: 1;
 		box-sizing: border-box;
 	}
 	#menu-overlay ul {
 		padding-bottom: 20%;
+		display: flex;
+		flex-direction: column;
 	}
-	#menu-overlay li {
+	#menu-overlay ul li {
+		display: flex;
 		color: #ffcf55;
 		text-transform: uppercase;
 		list-style-type: none;
 		font-weight: bold;
-		text-align: end;
 		padding-top: 7%;
 		padding-bottom: 7%;
+		align-self: flex-end;
 	}
 	#overlay-search {
 		padding-right: 4%;
@@ -62,7 +74,6 @@
 		flex-direction: row;
 		justify-content: space-between;
 	}
-
 	nav ul{
 		display: none;
 	}
@@ -73,8 +84,18 @@
 		right: 10%;
 		font-size: 25px;
 	}
+	.box-search {
+		display: none;
+	}
+	.section-comment, .section-linked {
+		padding: 0 5% 3% 5%;
+		margin: 0;
+	}
 	main, aside {
 		flex-grow: 1;
+	}
+	section{
+		margin-top: 80px;
 	}
 	.post p, .post h1, .post h2, .post ul, .comment p, .comment div, .comment h1, .comment h2 {
 		padding-left: 4%;
@@ -100,7 +121,13 @@
 	#logo {
 		width: 40%;
 	}
-	#menu-overlay, #overlay {
+	nav #menu-overlay{
+		display: flex;
+	}
+	nav #menu-overlay > div{
+		display: none;
+	}
+	nav #button-menu  {
 		display: none;
 	}
 	nav ul{
@@ -112,15 +139,23 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 	}
-	#button-menu{
-		display: none;
-	}
 	main {
 		max-width: 65%;
 	}
 	aside {
 		padding-top: 170px;
 		max-width: 30%;
+	}
+	.box-search {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		border: solid 1px #ccc;
+		align-items: center;
+		padding-top: 1px;
+		padding-bottom: 1px;
+		border-radius: 4px;
+		margin-bottom: 10%;
 	}
 	.post p, .post h1, .post h2, .post ul, .comment p, .comment div, .comment h1, .comment h2 {
 		padding-left: 0;
@@ -171,14 +206,12 @@ header {
 	height: auto;
 
 }
-
 nav {
 	margin-left: auto;
 	max-width: 50%;
 	width: auto;
 	flex-grow: 1;
 }
-
 nav ul li {
 	text-transform: uppercase;
 	list-style-type: none;
@@ -191,37 +224,21 @@ nav ul li {
 	align-items: flex-start;
 	justify-content: space-between;
 }
-
 main {
 	display: flex;
 	flex-direction: column;
 }
-
 aside {
 	width: auto;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-
-}
-.box-search {
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	border: solid 1px #ccc;
-	align-items: center;
-	padding-top: 1px;
-	padding-bottom: 1px;
-	border-radius: 4px;
-	margin-bottom: 10%;
 }
 
 #search {
 	width: 92%;
 	height: 42px;
 }
-
-
 #box-email {
 	width: 100%;
 	display: flex;
@@ -277,7 +294,6 @@ input{
 	text-align: center;
 	background-color: #fef8ee;
 	padding: 5%;
-
 }
 
 #share img {
@@ -288,16 +304,18 @@ input{
 	flex-direction: column;
 	background-color: #f3f3f3;
 	padding: 3%;
-
+	position: relative;
 }
-.container-comment h2::after {
+.comment::before {
 	content: "";
     height: 15px;
 	width: 15px;
-	display: block;
-	transform: rotate(45deg); 
-	margin: 2% 2% -18px 3%;
+	transform: rotate(45deg);
 	background-color: #f3f3f3;
+	position: absolute;
+	top: -7.5px;
+	left: 6%;
+    z-index: -1;
 }
 
 form {
@@ -305,13 +323,13 @@ form {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin-top: 3%;
+
 }
 form input {
 	width: 48%;
 	border: solid 1px #cccccc;
 	margin-top: 3%;
 	padding: 10px;
-
 }
 form textarea {
 	width: 100%;
@@ -319,7 +337,6 @@ form textarea {
 	resize: none;
 	margin-top: 3%;
 	padding: 10px;
-
 }
 
 .post-linked {
@@ -409,6 +426,8 @@ footer {
 }
 #container li::before {
 	content: "•";
+	position: relative;
+	z-index: 0;
 	color: #32bccc;
 	margin-right: 3%;
 	padding-left: 0;
